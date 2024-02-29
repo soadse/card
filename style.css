@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 99vw;
+    height:97vh;
+}
+
+.container {
+    margin: auto;
+    border-radius: 10px;
+    width: 250px;
+    height: 500px;
+}
+.container .conteudo{
+    position: relative;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 5px;
+}
+#c1 {
+    background-image: url(imagens/eu.jpg);
+    background-size: cover;
+    animation: voltar forwards 1s;
+}
+#c2 {
+    text-align: center;
+    flex-direction: column;
+}
+#c2 > p {
+    padding-top: 30px;
+}
+#c2 > p > strong {
+    font-family: cursive;
+    color: black;
+}
+
+.container > #c2 {
+    display: none;
+}
+
+.container:hover > #c2 {
+    display: flex;
+    animation: entrar forwards 1s; 
+}
+.container:hover > #c1 {
+    display: none;
+}
+
+@keyframes entrar {
+    0% {
+        border: none;
+        background-size: cover;
+        transform: rotateY(90deg);
+    }
+    50% {
+        border: none;
+    }
+    100% {
+        box-shadow: 10px 10px 10px black;
+    }
+}
+@keyframes voltar {
+    0% {
+        opacity: 0%;
+        box-shadow: 0px 0px 20px black; 
+    }
+}
