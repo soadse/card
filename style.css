@@ -23,7 +23,7 @@ body {
     border-radius: 5px;
 }
 #c1 {
-    background-image: url(imagens/eu.jpg);
+    background-image: url(imagens/perfil.jpg);
     background-size: cover;
     animation: voltar forwards 1s;
 }
